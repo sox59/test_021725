@@ -1,10 +1,16 @@
 const handler = async () => {
 
-  return {
+  const pets = [
 
+    { name: "Meowsalot", species: "cat" },
+    { name: "Barksalot", species: "dog" }
+
+  ]
+
+  return {
     statusCode: 200,
-    headers: { "Content-Type": "test/plain" },
-    body: "paul".toUpperCase()
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(pets)
   }
 
 }
